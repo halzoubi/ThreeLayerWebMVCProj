@@ -31,7 +31,7 @@ namespace BusinessLogicLayer
         public async Task AddEmployeeAsync(Employee employee)
         {
             //Writing logic
-            if (employee.Salary <= 100)
+            if (employee.Salary <= 100000)
             {
                 await _employeeRepository.AddEmployeeAsync(employee);
             }
@@ -63,7 +63,7 @@ namespace BusinessLogicLayer
         //..where the changes are being executed on my DbSet which goes to the Database
         public async Task UpdateEmployeeAsync(Employee employee)
         {
-            if (employee.Salary <= 100)
+            if (employee.Salary <= 100000)
             {
                 await _employeeRepository.UpdateEmployeeAsync(employee);
             }
